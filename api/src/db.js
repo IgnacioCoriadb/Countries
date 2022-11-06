@@ -33,7 +33,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 const { Country, TouristActivity } = sequelize.models;
 
 Country.belongsToMany(TouristActivity, {through: "Country_TouristActivity"});
-TouristActivity.belongsToMany(Country, {through: "TouristActivity"});
+TouristActivity.belongsToMany(Country, {through: "Country_TouristActivity"});
 
 
 
