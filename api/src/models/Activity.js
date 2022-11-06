@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define('touristActivity', {
+  sequelize.define('activity', {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
