@@ -14,7 +14,7 @@ router.get("/", async (req, res)=>{
             res.json(await getCountryQuery(name));
         }
     }catch(err){
-        return err;
+        res.json(err)
     }
 });
 
@@ -26,7 +26,8 @@ router.get("/:id", async (req, res)=>{
     
         res.json( await getCountryId(idM));
     }catch(err){
-        return err;
+        res.json(err)
+
     }
 });
 
