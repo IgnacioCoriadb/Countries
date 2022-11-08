@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    background-image: url(../../img/imgLanding.jpg);
+    width: 100mh;
+    height: 100vh;
+    background-size: cover;
+}
+.container{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 10%;
+}
+.countries{
+    font-size:150px;
+    color: #fff;
+}
+
+.btnStart{
+    width: 150px;
+    height: 90px;
+    border-radius:50px;
+    background-color: #fff;
+    font-size: 50px;
+    margin:50px ;
+}
+
