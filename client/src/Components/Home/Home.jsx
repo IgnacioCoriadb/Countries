@@ -1,10 +1,19 @@
-import React from "react-router-dom";
-import style from "./Home.module.css";
+import React,{useEffect} from "react";
+// import style from "./Home.module.css";
+import {getCountries} from "../../redux/actions/actions";
+import { useDispatch } from "react-redux";
+import Countries from "../Countries/Countries/Countries";
+
 
 function Home(){
+    
+const dispatch = useDispatch();
+useEffect(()=>{
+    dispatch(getCountries())
+})
     return (
         <div>
-           <input type="text" placeholder="nombre de el país"></input>
+            <Countries></Countries>
         </div>
 
     )
