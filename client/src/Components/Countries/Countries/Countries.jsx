@@ -2,7 +2,6 @@ import React ,{ useEffect,useState} from "react";
 import {useSelector} from "react-redux";
 import Country from "../Country/Country";
 import style from "./Countries.module.css";
-
 const Countries = ()=>{
     const countriesState = useSelector(state=> state.countries);
 
@@ -10,6 +9,7 @@ const Countries = ()=>{
     const cantResults = 10;
     const cantResultInitial =9;
     let filterCountries;
+    
 
     const prevHandler = ()=>{
         if(resultsPage <= cantResults){
@@ -47,7 +47,6 @@ const Countries = ()=>{
         <div className={style.container}>
 
         {  
-        
             filterCountries.map((c)=>(
                 <Country 
                     key={c.id}
@@ -56,7 +55,7 @@ const Countries = ()=>{
                     imgFlag={c.imgFlag}
                     continent={c.continent}            
                 />
-            ))
+            )) 
         }
         </div>
         <button onClick={prevHandler}>Prev</button>
